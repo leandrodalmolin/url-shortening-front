@@ -6,6 +6,13 @@
 // Base
 // ------------------------
 
+// Block
+$block-padding: 6rem;
+$block-half-breakpoint: tablet;
+
+// Wrapper
+$gutter: 2rem;
+
 // Media Queries
 $breakpoints: (
   "wide":       (max-width: 1400px),
@@ -19,6 +26,9 @@ $breakpoints: (
   "mobile":     (max-width: 480px),
   "min-mobile": (min-width: 480px),
 ) !default;
+
+// Z-indexes
+$z-index-header-nav: 4000;
 
 // ------------------------
 // Colours
@@ -44,3 +54,9 @@ $violet-dark: #232127;
 // Font weights
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+// ------------------------
+// Header Nav
+// ------------------------
+
+$header-nav-height-tablet: 7rem;

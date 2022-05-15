@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// BLOCK
+// -----------------------------------------------------------------------------
+
+.block {
+  position: relative;
+  padding: $block-padding 0;
+
+  @include media-query($block-half-breakpoint) {
+    padding: ($block-padding / 2) 0;
+  }
+
+  &--half {
+    padding: ($block-padding / 2) 0;
+
+    @include media-query($block-half-breakpoint) {
+      padding: ($block-padding / 4) 0;
+    }
+  }
+
+  // Cancels padding
+  &--no-top {
+    padding-top: 0;
+  }
+
+  &--no-bottom {
+    padding-bottom: 0;
+  }
+}

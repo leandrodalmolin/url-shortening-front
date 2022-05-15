@@ -1,0 +1,149 @@
+// -----------------------------------------------------------------------------
+// HEADER NAVIGATION
+// -----------------------------------------------------------------------------
+
+.header-nav {
+  z-index: $z-index-header-nav;
+  padding: 1.8rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    ul {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      gap: 2.3rem;
+
+      &:last-of-type {
+        flex-grow: 0;
+        gap: 3rem;
+      }
+    }
+
+    // Links
+    a {
+      &:not(.btn) {
+        font-size: 1.3rem;
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        color: $grey-violet;
+        transition: color 150ms;
+
+        &:hover {
+          color: $violet-dark;
+        }
+      }
+    }
+  }
+
+  .btn-menu {
+    display: none;
+  }
+
+  @include media-query(tablet) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: $header-nav-height-tablet;
+    padding: 0;
+
+    // Makes all wrappers same size so "brand" can fill all the header space
+    // and "links" can slide behind it
+    .wrapper,
+    &__inner,
+    &__brand {
+      width: 100%;
+      height: 100%;
+    }
+
+    .wrapper {
+      padding: 0;
+    }
+
+    &__inner {
+      justify-content: space-between;
+    }
+
+    &__brand {
+      z-index: 1;
+      padding: 0 $gutter;
+      background-color: $white;
+
+      img {
+        width: 95px;
+      }
+    }
+
+    .btn-menu {
+      display: block;
+    }
+
+    &__links {
+      position: absolute;
+      top: -500px;
+      left: $gutter;
+      right: $gutter;
+      flex-direction: column;
+      width: auto;
+      border-radius: 10px;
+      padding: 0 $gutter;
+      background-color: $brand-color-two;
+      transition: top 600ms, opacity 150ms linear;
+
+      ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 2.5rem 0;
+        gap: 2rem;
+        text-align: center;
+
+        li {
+          width: 100%;
+        }
+
+        &:last-of-type {
+          border-top: 1px solid rgba($white, 0.1);
+          gap: 2rem;
+        }
+      }
+
+      a {
+        &:not(.btn) {
+          font-size: 1.5rem;
+          color: $white;
+
+          &:hover {
+            color: rgba($white, 0.7);
+          }
+        }
+      }
+
+      .btn {
+        width: 100%;
+        padding: 1.6rem 1.8rem 1.5rem;
+      }
+
+      &.open {
+        top: $header-nav-height-tablet + 1.5rem;
+      }
+    }
+  }
+}
