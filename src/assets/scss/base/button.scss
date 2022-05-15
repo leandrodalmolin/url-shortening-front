@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// BUTTON
+// -----------------------------------------------------------------------------
+
+.btn {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 0.5rem;
+  padding: 1.4rem 3.2rem 1.3rem;
+  font-size: 1.6rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.15;
+  text-align: center;
+  color: $white;
+  background-color: $brand-color-one;
+  transition: background-color 150ms, color 150ms;
+  cursor: pointer;
+
+  &,
+  &:link,
+  &:visited,
+  &:active {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: lighten($brand-color-one, 15%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand-color-one;
+  }
+
+  // Variations
+  &--pill {
+    border-radius: 25px;
+  }
+
+  &--small {
+    padding: 1rem 1.8rem 0.9rem;
+    font-size: 1.3rem;
+  }
+
+  // Inclusive disable button
+  // For more: https://css-tricks.com/making-disabled-buttons-more-inclusive/
+  &[aria-disabled="true"] {
+    background-color: lighten($brand-color-one, 15%);
+    cursor: not-allowed;
+  }
+}

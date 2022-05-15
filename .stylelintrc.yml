@@ -1,9 +1,12 @@
 extends: stylelint-config-standard-scss
+ignoreFiles:
+  - src/assets/scss/vendors/**/*.scss
 plugins:
   - stylelint-order
 rules:
   at-rule-no-unknown: null
   no-descending-specificity: null
+  scss/no-global-function-names: null
   order/properties-order:
     - content
     - position

@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// HELPERS
+// -----------------------------------------------------------------
+
+// Accessible hidden elements. Will be hidden from display but still audible
+// to screen readers. Useful for hiding a form label, for example, when an
+// additional prompt is visible.
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+}
