@@ -4,7 +4,9 @@
 
 .header-nav {
   z-index: $z-index-header-nav;
-  padding: 1.8rem 0;
+  display: flex;
+  align-items: center;
+  height: $header-nav-height;
 
   &__inner {
     display: flex;
@@ -86,6 +88,7 @@
       z-index: 1;
       padding: 0 $gutter;
       background-color: $white;
+      box-shadow: 0 1px 5px rgba($black, 0.05);
 
       img {
         width: 95px;
