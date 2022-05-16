@@ -7,7 +7,7 @@
   display: inline-block;
   box-sizing: border-box;
   border: 0;
-  border-radius: 5px;
+  border-radius: 7px;
   margin: 0;
   padding: 1.4rem 3.2rem 1.3rem;
   font-size: 1.6rem;
@@ -33,6 +33,7 @@
 
   &:focus-visible {
     outline: 2px solid $brand-color-one;
+    outline-offset: 1px;
   }
 
   // Variations

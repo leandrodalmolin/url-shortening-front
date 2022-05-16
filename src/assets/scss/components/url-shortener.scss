@@ -1,0 +1,47 @@
+// -----------------------------------------------------------------------------
+// URL SHORTENER
+// -----------------------------------------------------------------------------
+
+.url-shortener {
+  position: absolute;
+  left: $gutter;
+  right: $gutter;
+  z-index: 1;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 4rem 5.2rem;
+  background: $section-bg-color-medium url("../../images/bg-shorten-desktop.svg") no-repeat center;
+  background-size: cover;
+  transform: translateY(-50%);
+
+  &__form {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__control {
+    &:first-child {
+      flex: 1;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    padding: 1.7rem 3.2rem 1.6rem;
+  }
+
+  @include media-query(tablet) {
+    padding: 2rem;
+
+    &__form {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  @include media-query(mobile) {
+    background-image: url("../../images/bg-shorten-mobile.svg");
+    background-position: top right;
+    background-size: auto;
+  }
+}

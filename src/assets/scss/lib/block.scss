@@ -18,6 +18,14 @@
     }
   }
 
+  &--double {
+    padding: $block-padding-double 0;
+
+    @include media-query($block-half-breakpoint) {
+      padding: ($block-padding-double / 2) 0;
+    }
+  }
+
   // Cancels padding
   &--no-top {
     padding-top: 0;

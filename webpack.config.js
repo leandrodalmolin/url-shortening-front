@@ -81,6 +81,9 @@ module.exports = (env, argv) => {
                         isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
                         cssLoader,
                         'postcss-loader',
+                        // Resolves relative paths in url() statements based on the original source file
+                        // https://github.com/bholloway/resolve-url-loader
+                        'resolve-url-loader',
                         sassLoader
                     ],
                 },

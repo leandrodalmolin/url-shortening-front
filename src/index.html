@@ -36,31 +36,43 @@
     </header>
     <section class="section  overflow-hidden">
         <div class="wrapper">
-            <div class="hero">
-                <div class="hero__image">
-                    <img src="./assets/images/illustration-working.svg" alt="Working Illustration">
-                </div>
-                <div class="hero__content">
-                    <h1>More than just shorter links</h1>
-                    <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
-                    <a href="javascript:void(0)" class="btn  btn--pill">Get Started</a>
+            <div class="block  block--double  block--no-top">
+                <div class="hero">
+                    <div class="hero__image">
+                        <img src="./assets/images/illustration-working.svg" alt="Working Illustration">
+                    </div>
+                    <div class="hero__content">
+                        <h1>More than just shorter links</h1>
+                        <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
+                        <a href="javascript:void(0)" class="btn  btn--pill">Get Started</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="section  section--light">
         <div class="wrapper">
-            <div class="block">
-                <form action="/">
-                    <div>
+            <div class="url-shortener">
+                <form class="url-shortener__form" action="/">
+                    <div class="url-shortener__control">
                         <label for="link" class="sr-only">Link:</label>
-                        <input type="text" value="link" id="link" aria-required="true" placeholder="Shorten a link here..."/>
+                        <input class="form-control"
+                               type="text"
+                               id="link"
+                               aria-required="true"
+                               placeholder="Shorten a link here..."
+                        />
                     </div>
-                    <div>
+                    <div class="url-shortener__control">
                         <button type="submit" class="btn">Shorten It!</button>
                     </div>
                 </form>
-
+            </div>
+        </div>
+    </section>
+    <section class="section  section--light">
+        <div class="wrapper">
+            <div class="block  block--double">
                 <h2>Advanced Statistics</h2>
                 <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
                 <div>
