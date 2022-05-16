@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// SECTION
+// -----------------------------------------------------------------------------
+
+.section {
+  position: relative;
+
+  &--light {
+    background-color: $section-bg-color-light;
+  }
+
+  &--medium {
+    background-color: $section-bg-color-medium;
+  }
+
+  &--dark {
+    background-color: $section-bg-color-dark;
+  }
+}
