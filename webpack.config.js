@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
 
     // Environment options
     const isProduction = argv.mode === 'production';
-    const useSourceMaps = !isProduction;
+    const useSourceMaps = true;
 
     const cssLoader = {
         loader: "css-loader",
