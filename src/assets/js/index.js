@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    fetch('http://localhost:5000/shorten',{
+    fetch('http://shrl.netlify.app/shorten',{
         method: 'POST',
         headers: {
             'Accept': 'application/json',
