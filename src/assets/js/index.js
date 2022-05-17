@@ -16,3 +16,27 @@ document.addEventListener('keyup', (e) => {
         btnMenu.click();
     }
 });
+
+/**
+ * Snippet :: Handles form submit
+ */
+const form = document.querySelector('.js-form');
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    fetch('http://localhost:5000/shorten',{
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            fullUrl: formData.get('fullUrl')
+        })
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        });
+});

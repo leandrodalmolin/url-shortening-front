@@ -53,12 +53,14 @@
     <section class="section  section--light">
         <div class="wrapper">
             <div class="url-shortener">
-                <form class="url-shortener__form" action="/">
+                <form class="url-shortener__form  js-form">
                     <div class="url-shortener__control">
-                        <label for="link" class="sr-only">Link:</label>
+                        <label for="fullUrl" class="sr-only">Link:</label>
                         <input class="form-control"
-                               type="text"
-                               id="link"
+                               required
+                               type="url"
+                               id="fullUrl"
+                               name="fullUrl"
                                aria-required="true"
                                placeholder="Shorten a link here..."
                         />
