@@ -11,4 +11,8 @@
   margin-right: auto;
   padding-left: $gutter;
   padding-right: $gutter;
+
+  &--narrow {
+    max-width: 500px;
+  }
 }

@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// CARD
+// -----------------------------------------------------------------------------
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  padding: 6rem 2.7rem 2.7rem;
+  background-color: $white;
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $brand-color-two;
+    transform: translateY(-50%);
+
+    img {
+      max-width: 35px;
+    }
+  }
+
+  &__text {
+    font-size: 1.3rem;
+  }
+}

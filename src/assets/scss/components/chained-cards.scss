@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// CHAINED CARDS
+// -----------------------------------------------------------------------------
+
+$cards-gap: 2.4rem;
+
+.chained-cards {
+  display: flex;
+  gap: $cards-gap;
+  min-height: 300px;
+
+  .card {
+    &:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    &:nth-child(2) {
+      align-self: center;
+
+      // Chains
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 12%;
+        display: inline-block;
+        width: $cards-gap;
+        height: 0.6rem;
+        margin: auto;
+        background-color: $brand-color-one;
+      }
+
+      // Left chain
+      &::before {
+        left: -$cards-gap;
+      }
+
+      // Right chain
+      &::after {
+        right: -$cards-gap;
+      }
+    }
+
+    &:nth-child(3) {
+      align-self: flex-end;
+    }
+  }
+}
