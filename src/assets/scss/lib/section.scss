@@ -5,15 +5,15 @@
 .section {
   position: relative;
 
-  &--light {
+  &--bg-light {
     background-color: $section-bg-color-light;
   }
 
-  &--medium {
+  &--bg-medium {
     background-color: $section-bg-color-medium;
   }
 
-  &--dark {
+  &--bg-dark {
     background-color: $section-bg-color-dark;
   }
 }
