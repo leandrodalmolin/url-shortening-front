@@ -3,6 +3,7 @@
 // -----------------------------------------------------------------------------
 
 $cards-gap: 2.4rem;
+$cards-gap-smaller-devices: $cards-gap * 3;
 
 .chained-cards {
   display: flex;
@@ -10,6 +11,8 @@ $cards-gap: 2.4rem;
   min-height: 300px;
 
   .card {
+    flex: 1;
+
     &:nth-child(1) {
       align-self: flex-start;
     }
@@ -17,7 +20,7 @@ $cards-gap: 2.4rem;
     &:nth-child(2) {
       align-self: center;
 
-      // Chains
+      // Chains (horizontal)
       &::before,
       &::after {
         content: "";
@@ -44,6 +47,52 @@ $cards-gap: 2.4rem;
 
     &:nth-child(3) {
       align-self: flex-end;
+    }
+  }
+
+  @include media-query(laptop) {
+    flex-direction: column;
+    min-height: auto;
+    gap: $cards-gap-smaller-devices;
+    margin-top: 3.5rem;
+
+    .card {
+      text-align: center;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        align-self: auto;
+      }
+
+      &:nth-child(2) {
+        // Chains (vertical)
+        &::before,
+        &::after {
+          top: auto;
+          bottom: auto;
+          left: 0;
+          right: 0;
+          width: 0.6rem;
+          height: $cards-gap-smaller-devices;
+        }
+
+        // Top
+        &::before {
+          top: -$cards-gap-smaller-devices;
+        }
+
+        // Bottom
+        &::after {
+          bottom: -$cards-gap-smaller-devices;
+        }
+      }
+
+      &__icon {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
   }
 }
