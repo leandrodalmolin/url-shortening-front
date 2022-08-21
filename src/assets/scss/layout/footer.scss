@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------------------
+
+.footer {
+  &__container {
+    display: flex;
+    gap: $gutter;
+    flex-wrap: wrap;
+    padding: 6rem 0;
+
+    > div {
+      flex: 1;
+
+      &:first-child {
+        flex: 2;
+      }
+    }
+  }
+
+  &__logo {
+    width: 102px;
+  }
+
+  &__block {
+    h6 {
+      font-size: 1.2rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: $grey-violet;
+      transition: color 300ms;
+
+      &:hover {
+        color: $brand-color-one;
+      }
+    }
+
+    ul {
+      margin: 1.2rem 0;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.2rem;
+    margin: 0 !important; // override .footer__block margins
+
+    img {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  @include media-query(tablet) {
+    &__social-media {
+      flex-wrap: wrap;
+    }
+  }
+
+  @include media-query(mobile) {
+    &__container {
+      padding: 4rem 0;
+      text-align: center;
+
+      > div {
+        flex-basis: 100%;
+      }
+    }
+
+    &__logo {
+      margin-bottom: 1.1rem;
+    }
+
+    &__social-media {
+      padding-top: 1rem;
+    }
+  }
+}
