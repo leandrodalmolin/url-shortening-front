@@ -20,6 +20,7 @@
 
   &__logo {
     width: 102px;
+    color: $white;
   }
 
   &__block {
@@ -50,7 +51,11 @@
     gap: 2.2rem;
     margin: 0 !important; // override .footer__block margins
 
-    img {
+    a {
+      color: $white;
+    }
+
+    .icon {
       display: block;
       width: 20px;
       height: 20px;

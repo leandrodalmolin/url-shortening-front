@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>URL Shortening</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
 </head>
 <body>
     <header class="header-nav">
         <div class="wrapper">
             <nav class="header-nav__inner">
                 <div class="header-nav__brand">
-                    <img src="./assets/images/logo.svg" alt="Shortly">
+                    <svg class="icon  icon--logo">
+                        <use xlink:href="./assets/images/svg-sprite.svg#logo"></use>
+                    </svg>
                     <button class="btn-menu  js-btn-menu" type="button" aria-label="Menu" aria-controls="navigation">
                         <div class="btn-menu__icon">
                             <div class="btn-menu__line btn-menu__line--1"></div>
@@ -85,7 +89,9 @@
                 <div class="chained-cards">
                     <div class="card">
                         <div class="card__icon">
-                            <img src="./assets/images/icon-brand-recognition.svg" alt="Brand Recognition">
+                            <svg class="icon  icon--brand-recognition">
+                                <use xlink:href="./assets/images/svg-sprite.svg#brand-recognition"></use>
+                            </svg>
                         </div>
                         <h5><b>Brand Recognition</b></h5>
                         <p class="card__text">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help
@@ -93,7 +99,9 @@
                     </div>
                     <div class="card">
                         <div class="card__icon">
-                            <img src="./assets/images/icon-detailed-records.svg" alt="Detailed Records">
+                            <svg class="icon  icon--detailed-records">
+                                <use xlink:href="./assets/images/svg-sprite.svg#detailed-records"></use>
+                            </svg>
                         </div>
                         <h5><b>Detailed Records</b></h5>
                         <p class="card__text">Gain insights into who is clicking your links. Knowing when and where people engage with your
@@ -101,7 +109,9 @@
                     </div>
                     <div class="card">
                         <div class="card__icon">
-                            <img src="./assets/images/icon-fully-customizable.svg" alt="Fully Customizable">
+                            <svg class="icon  icon--fully-customizable">
+                                <use xlink:href="./assets/images/svg-sprite.svg#fully-customizable"></use>
+                            </svg>
                         </div>
                         <h5><b>Fully Customizable</b></h5>
                         <p class="card__text">Improve brand awareness and content discoverability through customizable links, supercharging
@@ -143,7 +153,9 @@
             <div class="wrapper">
                 <div class="footer__container">
                     <div class="footer__block">
-                        <img class="footer__logo" src="./assets/images/logo-white.svg" alt="Shortly">
+                        <svg class="icon  icon--logo  footer__logo">
+                            <use xlink:href="./assets/images/svg-sprite.svg#logo"></use>
+                        </svg>
                     </div>
                     <div class="footer__block">
                         <h6 class="text-white"><b>Features</b></h6>
@@ -174,22 +186,30 @@
                         <ul class="footer__social-media">
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="./assets/images/icon-facebook.svg" alt="Facebook" />
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/images/svg-sprite.svg#facebook"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="./assets/images/icon-twitter.svg" alt="Twitter" />
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/images/svg-sprite.svg#twitter"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="./assets/images/icon-pinterest.svg" alt="Pinterest" />
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/images/svg-sprite.svg#pinterest"></use>
+                                    </svg>
                                 </a>
                             </li>
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="./assets/images/icon-instagram.svg" alt="Instagram" />
+                                    <svg class="icon">
+                                        <use xlink:href="./assets/images/svg-sprite.svg#instagram"></use>
+                                    </svg>
                                 </a>
                             </li>
                         </ul>

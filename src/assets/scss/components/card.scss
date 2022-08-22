@@ -20,8 +20,9 @@
     background-color: $brand-color-two;
     transform: translateY(-50%);
 
-    img {
-      max-width: 35px;
+    .icon {
+      width: 35px;
+      height: 35px;
     }
   }
 

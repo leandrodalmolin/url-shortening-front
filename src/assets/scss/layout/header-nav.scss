@@ -89,10 +89,10 @@
       padding: 0 $gutter;
       background-color: $white;
       box-shadow: 0 1px 5px rgba($black, 0.05);
+    }
 
-      img {
-        width: 95px;
-      }
+    &__logo {
+      width: 95px;
     }
 
     .btn-menu {

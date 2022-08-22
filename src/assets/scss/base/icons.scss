@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// ICONS
+// -----------------------------------------------------------------------------
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentcolor;
+  fill: currentcolor;
+
+  // Logo
+  &--logo {
+    width: 121px;
+    height: 33px;
+    color: $brand-color-four;
+  }
+
+  // Social Media
+  &--twitter {
+    width: 24px;
+    height: 20px;
+  }
+
+  &--facebook,
+  &--instagram,
+  &--pinterest {
+    width: 24px;
+    height: 24px;
+  }
+
+  // Misc
+  &--detailed-records,
+  &--brand-recognition,
+  &--fully-customizable {
+    width: 40px;
+    height: 40px;
+    color: #2bd0d0;
+  }
+}
