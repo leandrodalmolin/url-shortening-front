@@ -57,20 +57,25 @@
     <section class="section  section--bg-light">
         <div class="wrapper">
             <div class="url-shortener">
-                <form class="url-shortener__form  js-form">
+                <form novalidate class="url-shortener__form  js-form">
                     <div class="url-shortener__control">
                         <label for="fullUrl" class="sr-only">Link:</label>
                         <input class="form-control  js-form-full-url"
                                required
-                               type="url"
+                               type="text"
+                               inputmode="url"
                                id="fullUrl"
                                name="fullUrl"
                                aria-required="true"
                                placeholder="Shorten a link here..."
                         />
+                        <small class="form-error"></small>
                     </div>
                     <div class="url-shortener__control">
-                        <button type="submit" class="btn">Shorten It!</button>
+                        <button type="submit" class="btn">
+                            <span class="btn__text">Shorten It!</span>
+                            <span class="icon-spinner"></span>
+                        </button>
                     </div>
                 </form>
             </div>

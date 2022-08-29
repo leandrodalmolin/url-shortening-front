@@ -2,6 +2,7 @@
 // ICONS
 // -----------------------------------------------------------------------------
 
+// SVG Icons
 .icon {
   position: relative;
   display: inline-block;
@@ -39,4 +40,18 @@
     height: 40px;
     color: #2bd0d0;
   }
+}
+
+// Spinner from https://cssloaders.github.io/
+// Use: <span class="icon-spinner"></span>
+.icon-spinner {
+  @include rotation;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  border: 4px solid $white;
+  border-bottom-color: transparent;
+  border-radius: 50%;
 }

@@ -10,6 +10,7 @@ const timeout = function (s) {
 };
 
 export const AJAX = async function (url, payload = null) {
+    // eslint-disable-next-line no-useless-catch
     try {
         const fetchPromise = !payload
             ? fetch(url)
@@ -27,13 +28,17 @@ export const AJAX = async function (url, payload = null) {
         const res = await Promise.race([fetchPromise, timeout(TIMEOUT_SEC)]);
         const data = await res.json();
 
-        if (!res.ok)
+        if (!res.ok) {
+            // Errors related to server side validation
+            if (data.errors) {
+                throw new Error(data.errors[0].msg);
+            }
+
             throw new Error(`${data.message} (${res.status})`);
+        }
 
         return data;
     } catch (err) {
-        /* eslint-disable */
-        console.error(err);
-        /* eslint-enable */
+        throw err;
     }
 };

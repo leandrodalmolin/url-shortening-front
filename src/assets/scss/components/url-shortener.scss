@@ -20,8 +20,16 @@
   }
 
   &__control {
+    position: relative;
+
     &:first-child {
       flex: 1;
+    }
+
+    .form-error {
+      position: absolute;
+      bottom: -25px;
+      left: 0;
     }
   }
 
@@ -36,6 +44,12 @@
     &__form {
       flex-direction: column;
       gap: 1.5rem;
+
+      .form-error {
+        position: relative;
+        bottom: -3px;
+        left: auto;
+      }
     }
   }
 

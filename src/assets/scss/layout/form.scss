@@ -20,6 +20,7 @@
 
   &::placeholder {
     color: $grey-violet;
+    transition: color 0.15s ease-in-out;
   }
 
   &:focus {
@@ -28,5 +29,25 @@
     color: $violet-dark;
     background-color: $white;
     box-shadow: 0 0 0 0.25rem rgba($brand-color-one, 0.3);
+  }
+
+  .error & {
+    border-color: $form-error;
+    box-shadow: 0 0 0 0.25rem $form-error;
+
+    &::placeholder {
+      color: $form-error;
+    }
+  }
+}
+
+.form-error {
+  font-style: italic;
+  color: $form-error;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+
+  .error & {
+    opacity: 1;
   }
 }
