@@ -6,11 +6,15 @@ class UrlListView extends ViewAbstract {
     _parentElement = document.querySelector('.js-url-list-view');
 
     _generateMarkup() {
+        return this._data.map(this._generateItemMarkup).join('');
+    }
+
+    _generateItemMarkup(item) {
         return `
             <div class="url-list__item">
-                <span>${this._data.full}</span>
-                <span>/${this._data.short}</span>
-                <button data-url="${API_URL + this._data.short}" class="btn  js-copy-to-clipboard">Copy</button>
+                <span>${item.full}</span>
+                <span>/${item.short}</span>
+                <button data-url="${API_URL + item.short}" class="btn  js-copy-to-clipboard">Copy</button>
             </div>
         `;
     }

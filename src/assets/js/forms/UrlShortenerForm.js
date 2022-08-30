@@ -8,12 +8,14 @@ export default class UrlShortenerForm {
     _submitButton;
     _inputSelectorsToClear;
     _isFormValid = true;
+    _store;
 
-    constructor(selector, inputSelectorsToClear = []) {
-        if (!selector) {
+    constructor(selector, store, inputSelectorsToClear = []) {
+        if (!selector || !store) {
             return;
         }
 
+        this._store = store;
         this._formElement = document.querySelector(selector);
         this._urlInput = document.getElementById('fullUrl');
         this._submitButton = this._formElement.querySelector('button[type="submit"]');
@@ -38,8 +40,9 @@ export default class UrlShortenerForm {
 
         try {
             const data = await this._persistUrl();
+            this._persistStore(data);
             this._clearInputFields();
-            UrlListView.render(data);
+            UrlListView.render(this._store.getState(), true);
         }
         // Server side validation
         catch (error) {
@@ -53,6 +56,22 @@ export default class UrlShortenerForm {
         const formData = new FormData(event.target);
         const payload = { fullUrl: formData.get('fullUrl') };
         return await AJAX(PERSIST_URL_API_ENDPOINT, payload);
+    }
+
+    /**
+     * Persists new state to localStorage
+     * @param {*} urlData 
+     */
+    _persistStore(urlData) {
+        const selectedData = {
+            full: urlData.full,
+            short: urlData.short
+        };
+
+        const currentState = this._store.getState();
+        const newState = [selectedData, ...currentState];
+        this._store.setState(newState);
+        this._store.persist();
     }
 
     _clearInputFields() {
