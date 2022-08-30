@@ -18,5 +18,10 @@ export default class ViewAbstract {
         }
 
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
+
+        this.onAfterRender();
     }
+
+    // Custom event
+    onAfterRender() {}
 }

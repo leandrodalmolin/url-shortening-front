@@ -42,3 +42,16 @@ export const AJAX = async function (url, payload = null) {
         throw err;
     }
 };
+
+/**
+ * Copy to clipboard snippet
+ * For more: https://www.30secondsofcode.org/js/s/copy-to-clipboard-async
+ * 
+ * @param {*} str 
+ * @returns 
+ */
+export const copyToClipboard = str => {
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText)
+        return navigator.clipboard.writeText(str);
+    return Promise.reject('The Clipboard API is not available.');
+};

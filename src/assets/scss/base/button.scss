@@ -37,6 +37,14 @@
   }
 
   // Variations
+  &--secondary {
+    background-color: $brand-color-two;
+
+    &:hover {
+      background-color: lighten($brand-color-two, 15%);
+    }
+  }
+
   &--pill {
     border-radius: 25px;
   }
