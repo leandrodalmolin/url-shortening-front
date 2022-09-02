@@ -1,6 +1,6 @@
 # URL Shortening
 
-Project created to showcase my skills in the frontend fundamentals (HTML/SCSS/Vanilla JS).
+Project created to showcase my frontend fundamentals skills (HTML/SCSS/Vanilla JS).
 
 ## Table of contents
 
@@ -12,7 +12,7 @@ Project created to showcase my skills in the frontend fundamentals (HTML/SCSS/Va
 
 ## The project
 
-Integration with API ([see URL Shortening Serverless API repository](https://github.com/leandrodalmolin/url-shortening-server)) to create shortened URLs and display them on the website.
+Integration with my own built API ([see URL Shortening Serverless API repository](https://github.com/leandrodalmolin/url-shortening-server)) to create shortened URLs and display them on the website.
 
 Users should be able to:
 
@@ -43,7 +43,7 @@ Project idea and designs are from [Shortly URL shortening API Challenge on Front
 - SVG sprite for icons and SVG in an <img> tag for the complex graphic
 - Webpack - Static module bundle
   - Babel, ESLint, Stylelint, SASS Loader, CSS Minifier, PostCSS (Autoprefixer)
-- URL Shortening Serverless API (Node, Express, MongoDB, Serverless)
+- Integration with [URL Shortening Serverless API](https://github.com/leandrodalmolin/url-shortening-server) (Node, Express, MongoDB)
 
 ## Project setup
 ```
