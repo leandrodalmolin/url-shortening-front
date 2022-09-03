@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leandropdmolin/url-shortening-front.git"
+    "url": "git+https://github.com/leandrodalmolin/url-shortening-front.git"
   },
   "author": "Leandro Piovezan Dal Molin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leandropdmolin/url-shortening-front/issues"
+    "url": "https://github.com/leandrodalmolin/url-shortening-front/issues"
   },
-  "homepage": "https://github.com/leandropdmolin/url-shortening-front#readme",
+  "homepage": "https://github.com/leandrodalmolin/url-shortening-front#readme",
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.17.0",
