@@ -1,4 +1,4 @@
-import '../scss/main.scss';
+import '@scss/main.scss';
 import UrlShortenerForm from "./forms/UrlShortenerForm";
 import MobileMenu from "./components/MobileMenu";
 import Store from './store';

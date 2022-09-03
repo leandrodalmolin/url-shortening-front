@@ -1,6 +1,6 @@
 import ViewAbstract from "./ViewAbstract";
-import { API_URL } from "../config";
-import { copyToClipboard } from "../helpers";
+import { API_URL } from "@/config";
+import { copyToClipboard } from "@/helpers";
 
 class UrlListView extends ViewAbstract {
     _parentElement = document.querySelector('.js-url-list-view');

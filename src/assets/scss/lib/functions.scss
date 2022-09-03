@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// FUNCTIONS
+// -----------------------------------------------------------------------------
+
+// Handles image urls
+// Using Webpack alias to img folder to avoid issues with relative paths when importing them via modules
+@function image-url($image) {
+  $alias: "@images/";
+
+  @return url($alias + $image);
+}

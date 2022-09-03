@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
 
     // Environment options
     const isProduction = argv.mode === 'production';
-    const useSourceMaps = true;
+    const useSourceMaps = !isProduction;
 
     const cssLoader = {
         loader: "css-loader",
@@ -18,10 +18,7 @@ module.exports = (env, argv) => {
     };
 
     const sassLoader = {
-        loader: "sass-loader",
-        options: {
-            sourceMap: useSourceMaps
-        }
+        loader: "sass-loader"
     };
 
     return {
@@ -49,6 +46,14 @@ module.exports = (env, argv) => {
             filename: '[name].[contenthash].js',
             path: path.resolve(__dirname, 'dist'),
             clean: true,
+        },
+        resolve: {
+            // Sets aliases to /js/ and /scss/ folders to avoid using relative paths when importing them (i.e. ../../js/)
+            alias: {
+                '@': path.resolve(__dirname, 'src', 'assets', 'js'),
+                '@scss': path.resolve(__dirname, 'src', 'assets', 'scss'),
+                '@images': path.resolve(__dirname, 'src', 'assets', 'images')
+            }
         },
         optimization: {
             splitChunks: {
@@ -81,9 +86,6 @@ module.exports = (env, argv) => {
                         isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
                         cssLoader,
                         'postcss-loader',
-                        // Resolves relative paths in url() statements based on the original source file
-                        // https://github.com/bholloway/resolve-url-loader
-                        'resolve-url-loader',
                         sassLoader
                     ],
                 },

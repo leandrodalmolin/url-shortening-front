@@ -1,6 +1,6 @@
-import UrlListView from "../views/UrlListView";
-import { AJAX } from "../helpers";
-import { PERSIST_URL_API_ENDPOINT } from "../config";
+import UrlListView from "@/views/UrlListView";
+import { AJAX } from "@/helpers";
+import { PERSIST_URL_API_ENDPOINT } from "@/config";
 
 export default class UrlShortenerForm {
     _formElement;

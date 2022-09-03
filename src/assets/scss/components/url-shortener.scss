@@ -10,7 +10,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   padding: 4rem 5.2rem;
-  background: $section-bg-color-medium url("../../images/bg-shorten-desktop.svg") no-repeat center;
+  background: $section-bg-color-medium image-url("bg-shorten-desktop.svg") no-repeat center;
   background-size: cover;
   transform: translateY(-50%);
 
@@ -54,7 +54,7 @@
   }
 
   @include media-query(mobile) {
-    background-image: url("../../images/bg-shorten-mobile.svg");
+    background-image: image-url("bg-shorten-mobile.svg");
     background-position: top right;
     background-size: auto;
   }
